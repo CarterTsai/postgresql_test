@@ -1,9 +1,15 @@
 TEST Postgresql
 ===============
 
-### RUN PSQL
+### RUN Docker
+```
+$> docker-compose up -d
+```
 
-docker run -it --rm --link postgresql_db_1 postgres:9.1 psql -h 192.168.99.100 -U admin -d mrbs
+### RUN PSQL
+```
+$> docker run -it --rm --link postgresql_db_1 postgres:9.1 psql -h 192.168.99.100 -U admin -d test
+```
 
 ### Create Table
 
