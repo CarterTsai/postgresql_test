@@ -11,7 +11,7 @@ namespace postgresql_test
 	{
 		public static void Main(string[] args)
 		{
-			var connectString = "Host=192.168.99.100;Username=admin;Password=testtest;Database=mrbs";
+			var connectString = "Host=192.168.99.100;Username=admin;Password=testtest;Database=test";
 			using (NpgsqlConnection connection = new NpgsqlConnection(connectString)) 
 			{
 				connection.Open();
