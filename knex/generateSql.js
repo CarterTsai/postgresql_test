@@ -4,7 +4,7 @@ var pg = require("knex")({client: 'pg'});
 function createTable(db) {
     return db.schema.createTable('TEST', function (t) {
         t.increments('Id').index().primary().defaultTo(0);
-        t.uuid('UUID').notNullable();
+        t.uuid('UUID').notNullable().index();
     }).toString();
 }
 
