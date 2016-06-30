@@ -1,0 +1,14 @@
+version: "2"
+services:
+    db:
+        image: postgres:9.1
+        environment:
+            - POSTGRES_USER=admin
+            - POSTGRES_PASSWORD=testtest
+            - POSTGRES_DB=test
+        ports:
+            - "5432:5432"
+        # restart: always
+        logging:
+            driver: "json-file"
+        network_mode: "bridge"
